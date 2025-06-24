@@ -41,7 +41,7 @@ header{
     height: 100px;
 }   
 .navegador {
-    display: block;
+    display: flex;
     box-sizing: inherit;
     height: 100%;
     padding-left: 10%;
@@ -61,8 +61,6 @@ header{
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-bottom: 2em;
-
 }
 .menu {
     display: flex;
