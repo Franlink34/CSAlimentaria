@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS Alimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
+     <link rel="stylesheet" href="/css/legislacion.css"/>
 </head>
 <body>
     <header>
@@ -43,62 +44,26 @@
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
+    <div class="principal">
+        <div class="fila">
+            <div class="tema">
+                <div class="higiene"><img class="higiene-imagen" src="/imagenes/higiene.png"></div>
+                <div class="texto"><p>Higiene<br>alimentaria</p></div>
+            </div>
+            <div class="tema">
+                <div class="etiquetado"><img class="etiquetado-imagen" src="/imagenes/etiquetado.png"></div>
+                <div class="texto"><p>Etiquetado</p></div>
+            </div>
+            <div class="tema">
+                <div class="microbiologicos"><img class="microbiologicos-imagen" src="/imagenes/microbiologicos.png"></div>
+                <div class="texto"><p>Criterios<br>Microbiologicos</p></div>
             </div>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar<br>para asegurar<br>tu crecimiento</p>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br>CODIGO QR</p>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <br><br>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <br><br>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <br><br>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <br><br>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
+        
     </div>
     <br><br>
     <script src="/javascript/main.js"></script>
     <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu .js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie">
             <a class="aviso" href="#aviso-legal">Aviso Legal</a>
