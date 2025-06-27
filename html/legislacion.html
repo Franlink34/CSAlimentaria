@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS Alimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
-     <link rel="stylesheet" href="/css/legislacion.css"/>
+    <link rel="stylesheet" href="/css/legislacion.css"/>
 </head>
 <body>
     <header>
@@ -39,31 +39,221 @@
                         </ul>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <div class="principal">
-        <div class="fila">
-            <div class="tema">
-                <div class="higiene"><img class="higiene-imagen" src="/imagenes/higiene.png"></div>
-                <div class="texto"><p>Higiene<br>alimentaria</p></div>
+        <section>
+            <div class="fila">
+                <div class="tema">
+                    <div><img src="/imagenes/higiene.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-higiene">Higiene<br>alimentaria</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/etiquetado.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-etiquetado">Etiquetado</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/microbiologicos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-microbiologicos">Criterios<br>Microbiologicos</p></div>
+                </div>
             </div>
-            <div class="tema">
-                <div class="etiquetado"><img class="etiquetado-imagen" src="/imagenes/etiquetado.png"></div>
-                <div class="texto"><p>Etiquetado</p></div>
+        </section>
+        <section>
+            <div class="fila">
+                <div class="tema">
+                    <div><img src="/imagenes/agua.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-agua">Agua de<br>consumo</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/lacteos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-lacteos">Lácteos</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/panaderia.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-panaderia">Panadería</p></div>
+                </div>
             </div>
-            <div class="tema">
-                <div class="microbiologicos"><img class="microbiologicos-imagen" src="/imagenes/microbiologicos.png"></div>
-                <div class="texto"><p>Criterios<br>Microbiologicos</p></div>
+        </section>
+        <section>
+            <div class="fila">
+                <div class="tema">
+                    <div><img src="/imagenes/helados.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-helados">Helados y<br>horchatas</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/huevo.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-huevo">Huevo</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/subproductos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-subproductos">Subproductos<br>animales</p></div>
+                </div>
             </div>
-        </div>
-        
+        </section>
+        <section>
+            <div class="fila">
+                <div class="tema">
+                    <div><img src="/imagenes/aditivos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-aditivos">Aditivos</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/registro.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-registro">Registro<br>sanitario</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/vehiculos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-vehiculos">Vehículos a<br>temperatura<br>regulada</p></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="fila">
+                <div class="tema">
+                    <div><img src="/imagenes/alergenos.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-alergenos">Alérgenos</p></div>
+                </div>
+                <div class="tema">
+                    <div><img src="/imagenes/novedades.png"></div>
+                    <div><p class="popup-trigger" data-popup-target="popup-novedades">Novedades<br>legislativas</p></div>
+                </div>
+                <div class="tema">
+                    <div></div>
+                    <div><p></p></div>
+                </div>
+            </div>
+        </section>
     </div>
     <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
+
+    <div id="popup-higiene" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Higiene Alimentaria</h2>
+            <p>Es esencial para prevenir enfermedades transmitidas por alimentos y garantizar la seguridad del consumidor. Incluye prácticas como la correcta limpieza y desinfección, el control de temperaturas y la prevención de la contaminación cruzada.</p>
+            <p>Las normativas clave en esta área a menudo se rigen por reglamentos europeos y nacionales, como el Reglamento (CE) nº 852/2004 relativo a la higiene de los productos alimenticios.</p>
+        </div>
+    </div>
+
+    <div id="popup-etiquetado" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Etiquetado</h2>
+            <p>El etiquetado de alimentos es fundamental para informar al consumidor sobre las características, composición y forma de uso de un producto. Debe ser claro, legible y no engañoso.</p>
+            <p>La legislación principal en la UE es el Reglamento (UE) nº 1169/2011, que establece la información obligatoria como la denominación del alimento, la lista de ingredientes, alérgenos, cantidad neta, fecha de duración mínima, condiciones de conservación, nombre del operador, país de origen, e información nutricional.</p>
+        </div>
+    </div>
+
+    <div id="popup-microbiologicos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Criterios Microbiológicos</h2>
+            <p>Los criterios microbiológicos son límites aceptables de microorganismos en los alimentos. Son indicadores de la higiene del proceso de producción y la seguridad del producto.</p>
+            <p>El Reglamento (CE) nº 2073/2005 sobre criterios microbiológicos para los productos alimenticios establece los niveles máximos para ciertos patógenos (como Salmonella o Listeria monocytogenes) y microorganismos indicadores de higiene (como E. coli o Enterobacteriaceae).</p>
+        </div>
+    </div>
+
+    <div id="popup-agua" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Agua de Consumo</h2>
+            <p>La calidad del agua destinada al consumo humano es vital. Se refiere al agua utilizada para beber, cocinar, preparar alimentos y otros fines domésticos, ya sea directamente o para la fabricación de productos alimenticios.</p>
+            <p>En España, el Real Decreto 3/2023, de 10 de enero, establece los criterios técnico-sanitarios de la calidad del agua de consumo, así como su control y suministro. Se controla la presencia de microorganismos, sustancias químicas y otros parámetros que puedan afectar la salud.</p>
+        </div>
+    </div>
+
+    <div id="popup-lacteos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Lácteos</h2>
+            <p>Los productos lácteos abarcan una amplia gama de alimentos derivados de la leche. Su producción, procesamiento y comercialización están sujetos a estrictas normas de higiene y calidad para garantizar la seguridad y la salud pública.</p>
+            <p>Existen normativas específicas que regulan la producción de leche cruda, el tratamiento térmico (pasteurización, UHT), la elaboración de quesos, yogures, y otros derivados, asegurando su trazabilidad y calidad microbiológica y fisicoquímica.</p>
+        </div>
+    </div>
+
+    <div id="popup-panaderia" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Panadería</h2>
+            <p>La legislación sobre productos de panadería y pastelería regula aspectos como las denominaciones de venta, los ingredientes autorizados, los aditivos, y las condiciones higiénico-sanitarias de los establecimientos.</p>
+            <p>El Real Decreto 308/2019, de 26 de abril, por el que se aprueba la norma de calidad para el pan, es un ejemplo de normativa específica que define qué es el "pan común", el "pan integral", y establece requisitos para ingredientes y procesos.</p>
+        </div>
+    </div>
+
+    <div id="popup-helados" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Helados y Horchatas</h2>
+            <p>Los helados y horchatas, por su composición y forma de consumo, requieren un control microbiológico y de higiene riguroso. La normativa específica aborda aspectos como los ingredientes, los aditivos, los procesos de fabricación y conservación, y los requisitos de temperatura.</p>
+            <p>Es fundamental controlar la Listeria monocytogenes y la Salmonella, así como mantener la cadena de frío para evitar la proliferación de microorganismos.</p>
+        </div>
+    </div>
+
+    <div id="popup-huevo" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Huevo</h2>
+            <p>La regulación del huevo y ovoproductos es crucial por el riesgo de Salmonella. La normativa establece clasificaciones por peso y calidad, condiciones de almacenamiento, etiquetado y trazabilidad desde la granja hasta el consumidor.</p>
+            <p>También se regulan los ovoproductos (productos transformados a base de huevo) para asegurar su seguridad microbiológica y su correcta manipulación en la industria alimentaria.</p>
+        </div>
+    </div>
+
+    <div id="popup-subproductos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Subproductos Animales</h2>
+            <p>Los subproductos animales no destinados al consumo humano (SANDACH) son materiales derivados de animales que pueden representar un riesgo si no se gestionan adecuadamente. La normativa regula su recogida, transporte, almacenamiento, manipulación y transformación o eliminación.</p>
+            <p>El Reglamento (CE) nº 1069/2009 establece las normas sanitarias aplicables a los SANDACH, su categorización (Categoría 1, 2, 3) y los métodos de eliminación o uso permitido.</p>
+        </div>
+    </div>
+
+    <div id="popup-aditivos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Aditivos</h2>
+            <p>Los aditivos alimentarios son sustancias añadidas a los alimentos para mejorar sus características (color, sabor, conservación, textura) o para facilitar su procesamiento. Su uso está estrictamente regulado y solo se permiten aquellos que han sido evaluados y aprobados como seguros para la salud.</p>
+            <p>El Reglamento (CE) nº 1333/2008 sobre aditivos alimentarios establece las listas de aditivos autorizados, sus condiciones de uso y etiquetado. Los aditivos se identifican por una "E" seguida de un número.</p>
+        </div>
+    </div>
+
+    <div id="popup-registro" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Registro Sanitario</h2>
+            <p>El registro sanitario es una autorización obligatoria para empresas alimentarias que producen, transforman, envasan, almacenan o distribuyen alimentos o productos relacionados. Garantiza que la empresa cumple con la normativa higiénico-sanitaria y de seguridad alimentaria.</p>
+            <p>En España, el Registro General Sanitario de Empresas Alimentarias y Alimentos (RGSEAA) es gestionado por la Agencia Española de Seguridad Alimentaria y Nutrición (AESAN) y es esencial para la legalidad y control de las empresas del sector.</p>
+        </div>
+    </div>
+
+    <div id="popup-vehiculos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Vehículos a Temperatura Regulada</h2>
+            <p>El transporte de alimentos, especialmente los perecederos, requiere mantener condiciones de temperatura controladas para preservar su seguridad y calidad. Esto es crucial para la cadena de frío.</p>
+            <p>La normativa ATP (Acuerdo sobre Transporte Internacional de Mercancías Perecederas y sobre los Vehículos Especiales utilizados en este transporte) establece las condiciones técnicas y los controles de los vehículos isotermos, refrigerantes, frigoríficos y caloríficos.</p>
+        </div>
+    </div>
+
+    <div id="popup-alergenos" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Alérgenos</h2>
+            <p>La gestión y declaración de alérgenos en alimentos es una prioridad de seguridad alimentaria para proteger a las personas con alergias e intolerancias. La normativa exige informar claramente sobre la presencia de 14 sustancias o productos que causan alergias o intolerancias.</p>
+            <p>Esto incluye cereales con gluten, crustáceos, huevos, pescado, cacahuetes, soja, leche, frutos de cáscara, apio, mostaza, granos de sésamo, dióxido de azufre y sulfitos, altramuces y moluscos.</p>
+        </div>
+    </div>
+
+    <div id="popup-novedades" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Novedades Legislativas</h2>
+            <p>El sector alimentario es dinámico y la legislación en seguridad alimentaria está en constante evolución. Es vital mantenerse actualizado sobre las nuevas normativas, modificaciones o aclaraciones que puedan surgir a nivel local, nacional o europeo.</p>
+            <p>Esta sección se dedicará a informar sobre los últimos cambios en reglamentos, decretos, guías y recomendaciones que afecten a la producción, distribución y comercialización de alimentos.</p>
+        </div>
+    </div>
+    <script src="/javascript/legislacion.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie">
             <a class="aviso" href="#aviso-legal">Aviso Legal</a>
