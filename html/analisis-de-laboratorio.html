@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,59 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Análisis de laboratorio (físico-químico y microbiológico)</h2>
+            <p>Los servicios de laboratorio ofrecidos por <strong>CSA</strong> están acreditados según la norma ISO 9001:2008.</p>
+            <h6>¿A quiénes van dirigido?</h6>
+            <p>Establecimientos alimentarios de fabricación y venta, explotaciones y cooperativas agrarias, pesqueras y ganaderas, etc.</p>
+            <h6>¿Qué análisis realizan?</h6>
+            <ul>
+                <li>
+                    <strong>Análisis de agua de consumo:</strong>
+                    <br>
+                    Realizamos todos los análisis incluidos en el RD 140/2003 (y sus modificaciones) por el que se establecen los criterios sanitarios de la calidad del agua de consumo humano
+                    y las instalaciones que permiten su suministro desde la captación hasta el grifo del consumidor y el control de éstas.
+                    Se realizan, entre otros,<strong> análisis de control en grifo y de autocontrol.</strong>
+                </li>
+                <br>
+                <li>
+                    <strong>Análisis de alimentos:</strong>
+                    <br>
+                    Adaptamos su empresa al cumplimiento de los nuevos requisitos de higiene que marca la Unión Europea sobre los criterios microbiológicos aplicables a los productos alimenticios.
+                    <br>
+                    Se realizan, entre otros,<strong> análisis fisicoquímicos y microbiológicos.</strong>
+                </li>
+                <br>
+                <li><strong>Análisis de superficies</strong></li>
+                <br>
+                <li><strong>Estudios de vida útil de productos</strong></li>
+                <br>
+                <li>
+                <strong>Ensayos de migración:</strong>
+                <br>
+                    Obligatorios para todos aquellos materiales en contacto con alimentos.
+                </li>
+            </ul>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
+        <div class="derecha">
+            <img src="/imagenes/analisis-de-laboratorio.png" class="imagen-codigosqr">
+            <h6>¿Cómo se lleva a cabo?</h6>
+            <ul>
+                <li>Toma de muestras</li>
+                <li>Análisis</li>
+                <li>Entrega de informe del análisis, interpretación de los resultados, y propuesta de medidas correctoras en caso de resultados no favorables.</li>
+            </ul>
+            <p>Adaptamos los análisis a realizar a lo contemplado en su Sistema de Autocontrol.</p>
+            <p>Pida presupuesto sin compromiso y le informamos sobre los análisis que debe realizar según la legislación vigente.</p>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
         </div>
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">
@@ -109,7 +102,7 @@
                     <img src="/imagenes/logo_CSA_header.png" alt="CS Alimentaria Logo" class="logo-img">
                 </a>
             </div>
-            <div class="menu-pie">
+            <div>
                 <a href="aviso-legal.html">Aviso Legal</a>
                 <a href="politica-privacidad.html">Política de Privacidad</a>
                 <a href="politica-cookies.html">Política de Cookies</a>
@@ -117,6 +110,6 @@
                 <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
             </div>
         </nav>
-    </footer>
+    </footer>  
 </body>
 </html>

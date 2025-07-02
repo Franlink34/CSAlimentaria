@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,27 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Nutrición y dietética</h2>
+            <p>En <strong>CSA</strong> contamos con un equipo multidisciplinar especializado en la Nutrición Humana y la Dietética lo que nos permite colaborar con aquellos sectores en los que es necesario e importante llevar a cabo la gestión de menús semanales como comedores, catering, residencias, etc.</p>
+            <p>Para este tipo de empresas ofrecemos:</p>
+            <ul>
+                <li>Establecimiento de menús equilibrados para cada grupo de edad.</li>
+                <li>Revisión de los menús ya establecidos, analizando nutricionalmente el mismo.</li>
+                <li>Talleres sobre nutrición para padres.</li>
+            </ul>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
+        <div class="derecha">
+            <img src="/imagenes/nutricion-y-dietetica.png" class="imagen-codigosqr">
         </div>
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">
@@ -117,6 +78,6 @@
                 <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
             </div>
         </nav>
-    </footer>
+    </footer>  
 </body>
 </html>

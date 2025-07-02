@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,33 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Elaboración de fichas técnicas</h2>
+            <p>En <strong>CSA</strong> nos encargamos del diseño y desarrollo de las fichas técnicas de los productos que usted elabore en sus instalaciones ya sea para distribución, como para venta directa al consumidor.</p>
+            <p>Estos documentos son requeridos por la inspección sanitaria como parte integrante de su sistema APPCC para su revisión y en los que debe aparecer toda la información necesaria que detalle las características, descripción, envasado, embalaje, valor nutricional, etc. del producto en cuestión.</p>
+            <h6>A quién va dirigido</h6>
+            <p>Está dirigido a establecimientos que se dediquen a la producción, transformación, elaboración y/o envasado de alimentos, almacenamiento y/o distribución y/o transporte de alimentos que no vayan destinados al consumidor final.</p>
+            <h6>¿Cómo se realiza?</h6>
+            <ol>
+                <li>Toma de datos in situ sobre las características y elaboración del producto.</li>
+                <li>Estudio y análisis de la descripción de cada producto.</li>
+                <li>Elaboración de la ficha técnica.</li>
+                <li>Revisión periódica por cambios de normativa o petición por parte de la autoridad competente.</li>
+            </ol>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
+        <div class="derecha">
+            <img src="/imagenes/elaboración-de-fichas-tecnicas.png" class="imagen-codigosqr">
+            <br><br>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
         </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
+
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">
@@ -117,6 +84,6 @@
                 <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
             </div>
         </nav>
-    </footer>
+    </footer>  
 </body>
 </html>

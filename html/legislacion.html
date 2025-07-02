@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS Alimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
-    <link rel="stylesheet" href="/css/legislacion.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navegador" role="navigation" aria-label="Menú principal">
             <div class="logo">
-                <a href="#inicio">
+                <a href="index.html">
                     <img src="/imagenes/logo_CSA_header.png" alt="CS Alimentaria Logo" class="logo-img">
                 </a>
             </div>
@@ -24,19 +24,22 @@
                 <ul class="menu">
                     <li class="menu-link"><a href="index.html">Inicio</a></li>
                     <li class="menu-link has-submenu">
-                        <a href="#servicios" class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                        <a href="servicios.html" class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Servicios</a>
                         <ul class="submenu">
-                            <li><a href="#consultoria">Consultoría</a></li>
-                            <li><a href="#formacion">Formación</a></li>
-                            <li><a href="#auditorias">Auditorías</a></li>
+                            <li><a href="sistema-appcc.html">Sistema APPCC</a></li>
+                            <li><a href="sistemas-de-calidad.html">Sistemas de calidad</a></li>
+                            <li><a href="auditorias-y-seguimientos.html">Auditorías y seguimientos</a></li>
+                            <li><a href="asesoramiento-ante-inspecciones-sanitarias.html">Asesoramiento ante<br>inspecciones sanitarias</a></li>
+                            <li><a href="elaboracion-de-fichas-tecnicas.html">Elaboración de fichas técnicas</a></li>
+                            <li><a href="validacion-de-etiquetados.html">Validación de etiquetados</a></li>
+                            <li><a href="formacion.html">Formación</a></li>
+                            <li><a href="nutricion-y-dietetica.html">Nutrición y dietética</a></li>
+                            <li><a href="registro-y-autorizacion-sanitarios.html">Registro y autorización sanitarios</a></li>
+                            <li><a href="analisis-de-laboratorio.html">Análisis de laboratorio</a></li>
                         </ul>
                     </li>
                     <li class="menu-link has-submenu">
-                        <a href="#codigosqr" class="submenu-toggle" aria-haspopup="true" aria-expanded="false">Códigos QR</a>
-                        <ul class="submenu">
-                            <li><a href="#menu-digital">Menú Digital</a></li>
-                            <li><a href="#trazabilidad">Trazabilidad</a></li>
-                        </ul>
+                        <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
                     <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
@@ -44,7 +47,7 @@
             </div>
         </nav>
     </header>
-    <div class="principal">
+    <div class="principal-leg">
         <section>
             <div class="fila">
                 <div class="tema">
@@ -130,17 +133,32 @@
 
     <div id="popup-higiene" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-higiene">&times;</span>
             <h2>Higiene Alimentaria</h2>
-            <p>Es esencial para prevenir enfermedades transmitidas por alimentos y garantizar la seguridad del consumidor. Incluye prácticas como la correcta limpieza y desinfección, el control de temperaturas y la prevención de la contaminación cruzada.</p>
-            <p>Las normativas clave en esta área a menudo se rigen por reglamentos europeos y nacionales, como el Reglamento (CE) nº 852/2004 relativo a la higiene de los productos alimenticios.</p>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
+            <p>
+                <strong>REGLAMENTO (CE) Nº 178/2002 DEL PARLAMENTO EUROPEO Y DEL CONSEJO</strong>, de 28 de enero de 2002, por el que se establecen los principios y los requisitos generales de la legislación alimentaria, se crea la Autoridad Europea de Seguridad Alimentaria y se fijan procedimientos relativos a la seguridad alimentaria
+                <br>
+                <strong><a href="https://www.boe.es/buscar/doc.php?id=DOUE-L-2002-80201">https://www.boe.es/L-2002-80201</a></strong>
+            </p>
+            <p>
+                <strong>REGLAMENTO (CE) Nº 852/2004 DEL PARLAMENTO EUROPEO Y DEL CONSEJO</strong>, de 29 de abril de 2004, relativo a la higiene de los productos alimenticios
+                <br>
+                <strong><a href="https://www.boe.es/buscar/doc.php?id=DOUE-L-2004-81035">https://www.boe.es/L-2004-81035</a></strong>
+            </p>
+            <p>
+                <strong>REGLAMENTO (CE) Nº 853/2004 DEL PARLAMENTO EUROPEO Y DEL CONSEJO</strong>, de 29 de abril de 2004, por el que se establecen normas específicas de higiene de los alimentos de origen animal
+                <br>
+                <strong><a href="https://www.boe.es/buscar/doc.php?id=DOUE-L-2004-81036">https://www.boe.es/L-2004-81036</a></strong>
+            </p>
         </div>
     </div>
 
     <div id="popup-etiquetado" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-etiquetado">&times;</span>
             <h2>Etiquetado</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>El etiquetado de alimentos es fundamental para informar al consumidor sobre las características, composición y forma de uso de un producto. Debe ser claro, legible y no engañoso.</p>
             <p>La legislación principal en la UE es el Reglamento (UE) nº 1169/2011, que establece la información obligatoria como la denominación del alimento, la lista de ingredientes, alérgenos, cantidad neta, fecha de duración mínima, condiciones de conservación, nombre del operador, país de origen, e información nutricional.</p>
         </div>
@@ -148,8 +166,9 @@
 
     <div id="popup-microbiologicos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-microbiologicos">&times;</span>
             <h2>Criterios Microbiológicos</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>Los criterios microbiológicos son límites aceptables de microorganismos en los alimentos. Son indicadores de la higiene del proceso de producción y la seguridad del producto.</p>
             <p>El Reglamento (CE) nº 2073/2005 sobre criterios microbiológicos para los productos alimenticios establece los niveles máximos para ciertos patógenos (como Salmonella o Listeria monocytogenes) y microorganismos indicadores de higiene (como E. coli o Enterobacteriaceae).</p>
         </div>
@@ -157,8 +176,9 @@
 
     <div id="popup-agua" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-agua">&times;</span>
             <h2>Agua de Consumo</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>La calidad del agua destinada al consumo humano es vital. Se refiere al agua utilizada para beber, cocinar, preparar alimentos y otros fines domésticos, ya sea directamente o para la fabricación de productos alimenticios.</p>
             <p>En España, el Real Decreto 3/2023, de 10 de enero, establece los criterios técnico-sanitarios de la calidad del agua de consumo, así como su control y suministro. Se controla la presencia de microorganismos, sustancias químicas y otros parámetros que puedan afectar la salud.</p>
         </div>
@@ -166,8 +186,9 @@
 
     <div id="popup-lacteos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-lacteos">&times;</span>
             <h2>Lácteos</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>Los productos lácteos abarcan una amplia gama de alimentos derivados de la leche. Su producción, procesamiento y comercialización están sujetos a estrictas normas de higiene y calidad para garantizar la seguridad y la salud pública.</p>
             <p>Existen normativas específicas que regulan la producción de leche cruda, el tratamiento térmico (pasteurización, UHT), la elaboración de quesos, yogures, y otros derivados, asegurando su trazabilidad y calidad microbiológica y fisicoquímica.</p>
         </div>
@@ -175,8 +196,9 @@
 
     <div id="popup-panaderia" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-panaderia">&times;</span>
             <h2>Panadería</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>La legislación sobre productos de panadería y pastelería regula aspectos como las denominaciones de venta, los ingredientes autorizados, los aditivos, y las condiciones higiénico-sanitarias de los establecimientos.</p>
             <p>El Real Decreto 308/2019, de 26 de abril, por el que se aprueba la norma de calidad para el pan, es un ejemplo de normativa específica que define qué es el "pan común", el "pan integral", y establece requisitos para ingredientes y procesos.</p>
         </div>
@@ -184,8 +206,9 @@
 
     <div id="popup-helados" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-helados">&times;</span>
             <h2>Helados y Horchatas</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>Los helados y horchatas, por su composición y forma de consumo, requieren un control microbiológico y de higiene riguroso. La normativa específica aborda aspectos como los ingredientes, los aditivos, los procesos de fabricación y conservación, y los requisitos de temperatura.</p>
             <p>Es fundamental controlar la Listeria monocytogenes y la Salmonella, así como mantener la cadena de frío para evitar la proliferación de microorganismos.</p>
         </div>
@@ -193,8 +216,9 @@
 
     <div id="popup-huevo" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-huevo">&times;</span>
             <h2>Huevo</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>La regulación del huevo y ovoproductos es crucial por el riesgo de Salmonella. La normativa establece clasificaciones por peso y calidad, condiciones de almacenamiento, etiquetado y trazabilidad desde la granja hasta el consumidor.</p>
             <p>También se regulan los ovoproductos (productos transformados a base de huevo) para asegurar su seguridad microbiológica y su correcta manipulación en la industria alimentaria.</p>
         </div>
@@ -202,8 +226,9 @@
 
     <div id="popup-subproductos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-subproductos">&times;</span>
             <h2>Subproductos Animales</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>Los subproductos animales no destinados al consumo humano (SANDACH) son materiales derivados de animales que pueden representar un riesgo si no se gestionan adecuadamente. La normativa regula su recogida, transporte, almacenamiento, manipulación y transformación o eliminación.</p>
             <p>El Reglamento (CE) nº 1069/2009 establece las normas sanitarias aplicables a los SANDACH, su categorización (Categoría 1, 2, 3) y los métodos de eliminación o uso permitido.</p>
         </div>
@@ -211,8 +236,9 @@
 
     <div id="popup-aditivos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-aditivos">&times;</span>
             <h2>Aditivos</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>Los aditivos alimentarios son sustancias añadidas a los alimentos para mejorar sus características (color, sabor, conservación, textura) o para facilitar su procesamiento. Su uso está estrictamente regulado y solo se permiten aquellos que han sido evaluados y aprobados como seguros para la salud.</p>
             <p>El Reglamento (CE) nº 1333/2008 sobre aditivos alimentarios establece las listas de aditivos autorizados, sus condiciones de uso y etiquetado. Los aditivos se identifican por una "E" seguida de un número.</p>
         </div>
@@ -220,8 +246,9 @@
 
     <div id="popup-registro" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-registro">&times;</span>
             <h2>Registro Sanitario</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>El registro sanitario es una autorización obligatoria para empresas alimentarias que producen, transforman, envasan, almacenan o distribuyen alimentos o productos relacionados. Garantiza que la empresa cumple con la normativa higiénico-sanitaria y de seguridad alimentaria.</p>
             <p>En España, el Registro General Sanitario de Empresas Alimentarias y Alimentos (RGSEAA) es gestionado por la Agencia Española de Seguridad Alimentaria y Nutrición (AESAN) y es esencial para la legalidad y control de las empresas del sector.</p>
         </div>
@@ -229,8 +256,9 @@
 
     <div id="popup-vehiculos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-vehiculos">&times;</span>
             <h2>Vehículos a Temperatura Regulada</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>El transporte de alimentos, especialmente los perecederos, requiere mantener condiciones de temperatura controladas para preservar su seguridad y calidad. Esto es crucial para la cadena de frío.</p>
             <p>La normativa ATP (Acuerdo sobre Transporte Internacional de Mercancías Perecederas y sobre los Vehículos Especiales utilizados en este transporte) establece las condiciones técnicas y los controles de los vehículos isotermos, refrigerantes, frigoríficos y caloríficos.</p>
         </div>
@@ -238,8 +266,9 @@
 
     <div id="popup-alergenos" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-alergenos">&times;</span>
             <h2>Alérgenos</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>La gestión y declaración de alérgenos en alimentos es una prioridad de seguridad alimentaria para proteger a las personas con alergias e intolerancias. La normativa exige informar claramente sobre la presencia de 14 sustancias o productos que causan alergias o intolerancias.</p>
             <p>Esto incluye cereales con gluten, crustáceos, huevos, pescado, cacahuetes, soja, leche, frutos de cáscara, apio, mostaza, granos de sésamo, dióxido de azufre y sulfitos, altramuces y moluscos.</p>
         </div>
@@ -247,18 +276,29 @@
 
     <div id="popup-novedades" class="popup-overlay">
         <div class="popup-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" data-popup-id="popup-novedades">&times;</span>
             <h2>Novedades Legislativas</h2>
+            <p>Este popup se cerrará en <span class="contador-tiempo"></span> segundos.</p>
             <p>El sector alimentario es dinámico y la legislación en seguridad alimentaria está en constante evolución. Es vital mantenerse actualizado sobre las nuevas normativas, modificaciones o aclaraciones que puedan surgir a nivel local, nacional o europeo.</p>
             <p>Esta sección se dedicará a informar sobre los últimos cambios en reglamentos, decretos, guías y recomendaciones que afecten a la producción, distribución y comercialización de alimentos.</p>
         </div>
     </div>
+
     <script src="/javascript/legislacion.js"></script>
     <footer class="pie-de-pagina">
-        <nav class="navegador-pie">
-            <a class="aviso" href="#aviso-legal">Aviso Legal</a>
-            <a class="politica" href="#politica-privacidad">Política de Privacidad</a>
-            <a class="cookies" href="#politica-cookies">Política de Cookies</a>
+        <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/imagenes/logo_CSA_header.png" alt="CS Alimentaria Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="menu-pie">
+                <a href="aviso-legal.html">Aviso Legal</a>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <a href="politica-cookies.html">Política de Cookies</a>
+                <br>
+                <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
+            </div>
         </nav>
     </footer>
 </body>

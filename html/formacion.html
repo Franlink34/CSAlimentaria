@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,45 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Formación</h2>
+            <p>En <strong>CSA</strong> tenemos una amplia trayectoria en formación de alimentación, higiene, seguridad alimentaria, trazabilidad y nutrición entre otras.</p>
+            <p>Nuestros formadores son profesionales especializados en calidad y seguridad alimentaria y consultoría del sector de la alimentación.</p>
+            <p>La formación está enfocada a empresas, asociaciones, colegios y particulares; organizando la formación presencial o a distancia según necesidades.</p>
+            <h6>Presencial:</h6>
+            <ul>
+                <li>Se organiza bajo presupuesto.</li>
+                <li>Puede ser llevada a cabo en la propia empresa.</li>
+                <li>Si no dispone de tal espacio, nuestra empresa posee instalaciones propias para grupos reducidos.</li>
+                <li>Las empresas pueden gestionar la bonificación a través de la fundación tripartita.</li>
+            </ul>
+            <h6>A distancia:</h6>
+            <ul>
+                <li>Es necesario rellenar el siguiente formulario de formación.</li>
+                <li>Una vez recibamos el formulario nos ponemos en contacto con usted para enviar todo el material necesario por email para la realización del curso a distancia.</li>
+            </ul>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
+        <div class="derecha">
+            <img src="/imagenes/formacion.png" class="imagen-codigosqr">
+            <h6>Los cursos más destacados:</h6>
+            <ul>
+                <li>Certificado acreditativo de manipulador de alimentos (presencial y a distancia).</li>
+                <li>Formación sobre control de alérgenos (presencial).</li>
+                <li>Formación nutricional (presencial).</li>
+                <li>Formación en implantación de sistemas de autocontrol (presencial).</li>
+                <li>Formación sobre trazabilidad (presencial).</li>
+                <li>Formación en higiene y seguridad alimentaria (presencial).</li>
+                <li>Formación sobre protocolo de actuación ante el Covid-19 a los trabajadores del sector de la alimentación mayorista y minorista (presencial).</li>
+            </ul>
         </div>
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">
@@ -117,6 +96,6 @@
                 <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
             </div>
         </nav>
-    </footer>
+    </footer>  
 </body>
 </html>

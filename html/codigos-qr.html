@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,27 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Códigos QR</h2>
+            <p>En <span style="font-weight: bold";>CSA</span> hemos diseñado una plataforma específica para el sector de la hostelería y la restauración en la que las empresas con las que trabajamos pueden publicar su carta, menús y ofertas semanales, directamente a través de la web.</p>
+            <P>De esta manera, el establecimiento tiene la oportunidad de modificar su carta de forma rápida y sencilla en cualquier momento, si usted necesita variar la oferta de productos cada día o cada semana y sin necesidad de imprimir en papel y con la ventaja de ofrecer la información necesaria al consumidor  en cuanto a la presencia de alérgenos según el Reglamento 1169/2011.</P>
+            <P>Esto se llevará a cabo con la generación de un código QR específico para cada empresa que quiera utilizar este servicio.</P>
+            <P>Este código QR estará situado en un lugar visible de su establecimiento y accesible al cliente para facilitar su consulta.</P>
+            <P>De este modo, su cliente puede acceder de forma inmediata a la carta, menú, tapas que su establecimiento le ofrece desde su teléfono móvil escaneando ese código QR con la ventaja de que la información que aparece en la web puede ser actualizada de forma frecuente.</P>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
+        <div class="derecha">
+            <img src="/imagenes/imagenpaginacodigoqr.png" class="imagen-codigosqr">
+            <br><br>
+            <p>Contacta con nosotros para el asesoramiento y gestión de la información alimentaria obligatoria ofrecida al consumidor y la gestión de alérgenos que exige la legislación vigente.</p>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
+        </div>    
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">

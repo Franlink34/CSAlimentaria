@@ -1,62 +1,108 @@
-/* --- Estilos Generales y Resets --- */
-.carrusel {
-    width: 100vw;
-    height:  100vh;
-    position: relative;
-    overflow: hidden;
-    border-radius:10px;
-}
-.slide {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-size: 100%;
-    background-position: top center;
-    opacity: 0;
-    transition: opacity 1s ease;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-.activa {
-    opacity: 1;
-    z-index: 1;
-}
-.chef {
-    text-align: right;
-    color: green;
-    font-size: 100px;
-}
-.formacion {
-    text-align: left;
-    color: orange;
-    font-size: 80px;
-}
-.codigo-qr {
-    text-align: left;
-    color: blue;
-    font-size: 100px;
+/* --- Variables CSS (Opcional, pero recomendado para mantener consistencia) --- */
+:root {
+    --primary-color: #007bff; /* Azul para elementos interactivos */
+    --secondary-color: #28a745; /* Verde para acciones principales */
+    --accent-color: rgb(230, 135, 11); /* Naranja para resaltados */
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #666;
+    --text-lighter: rgb(111, 112, 114);
+    --bg-white: #ffffff;
+    --bg-light-grey: #f8f8f8;
+    --bg-lighter-grey: #f0f8ff;
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-focus: rgba(0, 123, 255, 0.2);
+    --header-height-desktop: 90px;
+    --header-height-mobile: 70px;
 }
 
+/* --- Resets y Estilos Generales --- */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Fuente moderna y limpia */
     line-height: 1.6;
-    color: #333;
+    color: var(--text-dark);
     -webkit-font-smoothing: antialiased; /* Suavizado de fuentes para Mac/iOS */
     -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes para Mac/iOS */
+    font-family: "Montserrat", Sans-serif; /* Aplicar fuente globalmente */
+    padding-top: var(--header-height-desktop); /* Padding para el header fijo */
+}
+
+/* Si no tienes <main>, puedes añadir este padding al body o a un contenedor principal */
+main { /* Asume que tienes un <main> después del header */
+    padding-top: 0; /* Ya se aplica al body, si el header es fijo */
+}
+
+div {
+    font-family: "Montserrat", Sans-serif; /* Redundante si se aplica a body, pero no hace daño */
+}
+
+section {
+    width: 100%;
+}
+
+a {
+    text-decoration: none; /* Estilo general para enlaces */
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: black;
+    font-style: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h6 {
+    color: #ED742C;
+    font-size: 1.9em;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: left;
+    justify-content: left;
+}
+
+p {
+    font-size: 15px;
+    font-style: normal;
+    align-items: left;
+    font-weight: 400;
+    color: var(--text-lighter);
+}
+
+ul {
+    margin-top: 5px;
+}
+
+ol {
+    margin-top: 5px;
+}
+
+li {
+    color: rgb(111, 112, 114);
+    
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
 }
 
 /* --- Header y Navegador Principal --- */
 header {
     width: 100%;
-    height: 90px; /* Un poco más estilizado que 100px */
-    background-color: #ffffff; /* Fondo blanco para un look limpio */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra más suave y moderna */
-    position: fixed; /* Header fijo para una navegación constante */
+    height: var(--header-height-desktop);
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Asegura que esté por encima de todo */
+    z-index: 1000;
     display: flex;
     align-items: center;
 }
@@ -65,10 +111,10 @@ header {
     display: flex;
     box-sizing: border-box;
     height: 100%;
-    width: 100%; /* Ocupa todo el ancho */
-    max-width: 1300px; /* Ancho máximo para el contenido del navegador */
-    margin: 0 auto; /* Centra el contenido del navegador */
-    padding: 0 30px; /* Más padding a los lados para un mejor respiro */
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
     align-items: center;
     justify-content: space-between;
 }
@@ -79,13 +125,13 @@ header {
 }
 
 .logo-img {
-    height: 55px; /* Ajusta el tamaño de tu logo para que se vea bien */
+    height: 55px;
     width: auto;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo a:hover .logo-img {
-    transform: scale(1.05); /* Efecto sutil al pasar el ratón por el logo */
+    transform: scale(1.05);
 }
 
 /* --- Menú Principal (Escritorio) --- */
@@ -95,7 +141,7 @@ header {
     width: auto;
     height: 100%;
     align-items: center;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; /* Transiciones más largas y suaves */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 .menu {
@@ -113,22 +159,22 @@ header {
     flex-direction: column;
     position: relative;
     text-transform: uppercase;
-    padding: 0 20px; /* Más padding para los enlaces principales */
+    padding: 0 20px;
     height: 100%;
     box-sizing: border-box;
-    font-size: 0.95em; /* Ligeramente más grande */
-    font-weight: 600; /* Un poco más de peso para los enlaces principales */
+    font-size: 0.95em;
+    font-weight: 500;
 }
 
 .menu-link a {
-    color: #555; /* Un gris oscuro para los enlaces por defecto */
+    color: var(--text-medium);
     text-decoration: none;
     display: flex;
     align-items: center;
     height: 100%;
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transición para el borde inferior */
-    position: relative; /* Para el efecto de underline animado */
-    padding-bottom: 5px; /* Espacio para el underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 /* Underline animado al pasar el ratón */
@@ -137,7 +183,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #007bff; /* Color del underline */
+    background-color: var(--primary-color);
     bottom: 0;
     left: 0;
     transition: width 0.3s ease-out;
@@ -148,57 +194,57 @@ header {
 }
 
 .menu-link a:hover {
-    color: #007bff; /* Color azul más vibrante */
+    color: var(--primary-color);
 }
 
 /* --- Estilos para el Submenú (Escritorio) --- */
 .submenu {
     list-style: none;
     margin: 0;
-    padding: 10px 0; /* Padding vertical para los ítems */
-    background-color: #ffffff; /* Fondo blanco puro */
+    padding: 10px 0;
+    background-color: var(--bg-white);
     position: absolute;
+    font-size: 0.85em;
     top: 100%;
-    left: 50%; /* Centrar el submenú horizontalmente con transform */
-    transform: translateX(-50%) translateY(10px); /* Inicialmente desplazado para animación */
-    min-width: 220px; /* Un poco más de ancho */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
-    border-radius: 8px; /* Bordes más redondeados */
+    left: 100%;
+    transform: translateX(-50%) translateY(10px);
+    min-width: 220px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-radius: 8px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     z-index: 990;
     pointer-events: none;
-    overflow: hidden; /* Para que el borde redondeado funcione con los items */
+    overflow: hidden;
 }
 
 /* Mostrar el submenú al pasar el ratón */
 .menu-link.has-submenu:hover > .submenu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0); /* Vuelve a su posición */
+    transform: translateX(-50%) translateY(0);
     pointer-events: auto;
 }
 
 .submenu li a {
-    color: #555;
-    padding: 12px 25px; /* Más padding para los enlaces del submenú */
+    color: var(--text-medium);
+    padding: 12px 25px;
     display: block;
     white-space: nowrap;
-    font-weight: 500; /* Peso normal */
+    font-weight: 500;
     font-size: 0.9em;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .submenu li a:hover {
-    background-color: #f0f8ff; /* Azul muy claro al pasar el ratón */
-    color: #007bff;
+    background-color: var(--bg-lighter-grey);
+    color: var(--primary-color);
 }
-
 
 /* --- Botón de Hamburguesa --- */
 .menu-toggle {
-    display: none;
+    display: none; /* Oculto por defecto en escritorio */
     background: none;
     border: none;
     cursor: pointer;
@@ -215,7 +261,7 @@ header {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #333;
+    background-color: var(--text-dark);
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
@@ -232,10 +278,515 @@ header {
     transform: translateY(-11px) rotate(-45deg);
 }
 
-/* --- Media Query para Dispositivos Móviles (Menú Desplegable Vertical) --- */
+/* --- Carrusel de Imágenes y Texto --- */
+.carrusel {
+    width: auto;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%;
+    background-position: top center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.activa {
+    opacity: 1;
+    z-index: 1;
+}
+
+.chef {
+    text-align: right;
+    color: rgb(77, 153, 58);
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.formacion {
+    text-align: left;
+    color: rgb(230, 135, 11);
+    font-size: 65px;
+    font-weight: 600;
+    text-shadow: 1px 1px #fff;
+}
+
+.codigo-qr {
+    text-align: left;
+    color: rgb(77, 153, 58);
+    font-size: 65px;
+    font-weight: 600;
+}
+
+/* --- Diseño de Contenido Principal (Columnas y Temas) --- */
+.principal-qr {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: top; /* Ajustado de 'justify-content: top' que no es válido a 'flex-start' */
+}
+
+.izquierda {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top; /* Ajustado a 'flex-start' */
+    margin-left: 200px;
+    margin-right: 20px;
+}
+
+.derecha {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top; /* Ajustado a 'flex-start' */
+    margin-right: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.principal-leg {
+    justify-content: center;
+    padding: 15px 15%;
+    /* Quitamos pointer-events: none; aquí para que los elementos hijos sigan siendo interactivos */
+}
+
+.textos-legales {
+    display: block;
+    unicode-bidi: isolate;
+    background-color: #e2e2e2;
+}
+
+.sub-textos-legales {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12em;
+    padding-right: 12em;
+    display: flex;
+}
+
+.content-area {
+    margin: 4em 0px;
+    padding: 0;
+    width: 100%;
+}
+
+.area-texto {
+    display: block;
+    background-color: white;
+}
+
+.texto {
+    margin: 0;
+    padding: 5.34em 6.67em;
+}
+
+.header-texto {
+    display: block;
+    unicode-bidi: isolate;
+    box-sizing: border-box;
+    color: rgb(111, 112, 114);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 22.5px;
+    text-size-adjust: 100%;
+
+}
+
+.texto-introduccion {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.h4-cookies {
+    color: rgb(111, 112, 114);
+    font-size: 3em;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.div-button-aviso {
+    justify-content: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    unicode-bidi: isolate;
+}
+
+.button-aviso {
+    background-color: rgb(32, 73, 132);
+    border-radius: 10px;
+    color: white;
+    line-height: 1em;
+    padding: 15px 30px;
+}
+
+.fila {
+    display: flex;
+}
+
+.tema {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 33%;
+    margin: 8px 0;
+    /* Las transiciones de aparición */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    pointer-events: auto; /* Asegura que los temas sean clickeables */
+}
+
+.tema.aparecer {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.temaservicio {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    margin: 8px 0;
+    /* Las transiciones de aparición */
+    transform: translateX(-200%);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 0.7s ease-out;
+    pointer-events: auto; /* Asegura que los temas sean clickeables */
+}
+
+.temaservicio.aparecer {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.principal-servicios {
+    height: 40px;
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+    margin: 0px 12px;
+    fill:#d9534f; 
+}
+
+svg:hover {
+    fill: #4b9c41;
+}
+
+.texto-servicios {
+    color: #314888;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.texto-servicios:hover {
+    color: #ED742C;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+/* --- Estilos para el Popup --- */
+/*color icono= 4b9c41*/
+/* Estilos para el párrafo que activa el popup */
+p.popup-trigger { /* Clase añadida en el HTML */
+    font-size: 20px;
+    font-weight: bold;
+    color: #314888;
+    margin: 0 0 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer; /* Indica que es clickeable */
+    padding: 5px; /* Para un área de clic más grande */
+    display: inline-block; /* Para que el padding funcione bien */
+    position: relative; /* Necesario para z-index */
+    z-index: 10; /* Eleva el párrafo por encima de posibles superposiciones locales */
+    pointer-events: auto; /* Asegura que el párrafo sea clickeable */
+}
+
+/* Estilos para el overlay del popup */
+.popup-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la ventana de visualización */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    justify-content: center; /* Usamos flex para centrar, pero estará oculto inicialmente */
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    opacity: 0; /* Animación opcional para el fade in/out del overlay */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Oculto y no interactivo por defecto */
+}
+
+/* Cuando el popup está activo, se muestra y es interactivo */
+.popup-overlay.active {
+    display: flex; /* Mostrar cuando está activo */
+    opacity: 1;
+    pointer-events: auto; /* Permite la interacción cuando está visible */
+}
+
+/* Estilos para el contenido del popup */
+.popup-content {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    max-height: 80vh; /* Altura máxima para permitir scroll */
+    overflow-y: auto; /* Habilitar scroll si el contenido es largo */
+    color: var(--text-dark);
+    transform: scale(0.9); /* Animación opcional para el contenido del popup */
+    transition: transform 0.3s ease-out;
+}
+
+/* Cuando el popup está activo, el contenido también se anima */
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: var(--text-dark);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    cursor: auto; /* Restablece el cursor a normal dentro del popup */
+    pointer-events: auto; /* Asegura que el contenido del popup sea interactivo */
+}
+
+/* Estilos para el botón de cerrar */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    color: var(--text-dark);
+}
+
+/* Estilos para el contador de tiempo dentro del popup */
+.popup-content .contador-tiempo {
+    font-weight: bold;
+    color: #d9534f; /* Un color que destaque, puedes cambiarlo */
+    font-size: 1.15em;
+}
+
+/* --- Estilos del Formulario --- */
+.formulario {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 35px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--bg-white);
+    box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1.05em;
+    color: var(--text-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--shadow-focus);
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+#enviar {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+#enviar:hover {
+    background-color: #218838; /* Tonalidad más oscura del verde */
+    transform: translateY(-2px);
+}
+
+#enviar:active {
+    transform: translateY(0);
+}
+
+.boton-carrusel {
+    background-color: #ED742C;
+    border-radius: 10px;
+    border: none;
+    margin: 15px 0px 50% 15px;
+    padding: 10px 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.boton-carrusel a {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: "Montserrat", Sans-serif;
+}
+
+.boton-carrusel:hover {
+    background-color: #314888;
+    transform: scale(1.1);
+}
+
+.boton-formulario {
+    background-color: rgb(77, 153, 58); /* Este parece ser el mismo verde que #enviar, considera usar una variable */
+    border-radius: 10px;
+    border: none;
+    margin: 15px 18%;
+    padding: 10px 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.boton-formulario a {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: "Montserrat", Sans-serif;
+}
+
+.boton-formulario:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.imagen-codigosqr {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Estilos del Pie de Página --- */
+
+.menu-pie {
+    padding: 15px;
+}
+
+.pie-de-pagina {
+    width: auto;
+    padding: 25px 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 80px;
+}
+
+.navegador-pie {
+    color: var(--text-lighter);
+    font-size: 0.9;
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: right; /* Esto podría entrar en conflicto con justify-content: space-between */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navegador-pie a {
+    color: var(--text-lighter);
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Underline animado para el pie de página (similar al menú principal) */
+.navegador-pie a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-out;
+}
+
+.navegador-pie a:hover::after {
+    width: 100%;
+}
+
+
+.navegador-pie a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* --- Media Query para Dispositivos Móviles (hasta 768px) --- */
 @media (max-width: 768px) {
+    body {
+        padding-top: var(--header-height-mobile); /* Ajustar padding para header móvil */
+    }
+
     header {
-        height: 70px; /* Header más pequeño en móvil */
+        height: var(--header-height-mobile); /* Header más pequeño en móvil */
     }
 
     .navegador {
@@ -247,20 +798,20 @@ header {
     }
 
     .menu-toggle {
-        display: flex;
+        display: flex; /* Mostrar el botón de hamburguesa */
     }
 
     .main-menu {
         position: fixed;
-        top: 70px; /* Ajustar a la altura del header móvil */
+        top: var(--header-height-mobile); /* Ajustar a la altura del header móvil */
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #ffffff; /* Fondo blanco */
+        height: calc(100vh - var(--header-height-mobile));
+        background-color: var(--bg-white);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        transform: translateX(100%);
+        transform: translateX(100%); /* Oculto a la derecha */
         opacity: 0;
         visibility: hidden;
         z-index: 999;
@@ -270,7 +821,7 @@ header {
     }
 
     .main-menu.active {
-        transform: translateX(0);
+        transform: translateX(0); /* Se desliza a la vista */
         opacity: 1;
         visibility: visible;
     }
@@ -284,10 +835,10 @@ header {
         margin: 0;
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid #f0f0f0; /* Borde más sutil */
+        border-bottom: 1px solid #f0f0f0;
         height: auto;
         padding: 0;
-        font-size: 1.1em; /* Más grande para fácil lectura en móvil */
+        font-size: 1.1em;
     }
 
     .menu-link:last-child {
@@ -295,13 +846,13 @@ header {
     }
 
     .menu-link a {
-        padding: 18px 0; /* Más espacio táctil */
-        color: #333;
+        padding: 18px 0;
+        color: var(--text-dark);
         height: auto;
     }
 
     .menu-link a:hover {
-        background-color: #f8f8f8; /* Fondo sutil al tocar/hover */
+        background-color: var(--bg-light-grey);
     }
 
     /* Ocultar el underline en móvil */
@@ -311,188 +862,74 @@ header {
 
     /* Comportamiento del submenú en móvil (Acordeón) */
     .submenu {
-        position: static;
-        opacity: 1;
+        position: static; /* No flotante */
+        opacity: 1; /* Siempre visible cuando se abre */
         visibility: visible;
-        transform: none;
+        transform: none; /* Eliminar transform */
         box-shadow: none;
         border-radius: 0;
         min-width: auto;
-        background-color: #f8f8f8; /* Fondo ligeramente diferente para el submenú móvil */
-        max-height: 0;
+        background-color: var(--bg-light-grey);
+        max-height: 0; /* Oculto por defecto, se expande con JS */
         overflow: hidden;
-        transition: max-height 0.4s ease-out; /* Transición para el acordeón */
+        transition: max-height 0.4s ease-out;
         pointer-events: auto;
-        padding: 0; /* Reiniciar padding para control de max-height */
+        padding: 0;
     }
 
     .menu-link.has-submenu.active > .submenu {
-        max-height: 500px; /* Se expande */
-        padding: 10px 0; /* Añadir padding cuando está expandido */
+        max-height: 500px; /* Se expande, ajusta si tu contenido es más largo */
+        padding: 10px 0;
     }
 
     .submenu li a {
         padding: 12px 0 12px 40px; /* Indentar más para diferenciar */
         text-align: center;
         font-size: 0.95em;
-        color: #666; /* Un poco más claro */
+        color: var(--text-light);
     }
 
     .submenu li a:hover {
         background-color: #f2f2f2;
-        color: #007bff;
+        color: var(--primary-color);
     }
 
     /* Ajustes para el texto del carrusel en móvil */
     .chef, .formacion, .codigo-qr {
-        font-size: 40px; /* Un tamaño más adecuado para móviles */
+        font-size: 40px;
     }
 
     .carrusel, .slide {
         height: 60vh;
-        margin-top: 70px; /* Ajustar por el header fijo */
+        margin-top: 0; /* Ya ajustado con el padding del body */
     }
-}
 
-/* --- Contenido Principal (para que no quede debajo del header fijo) --- */
-main { /* Asume que tienes un <main> después del header */
-    padding-top: 90px; /* Debe coincidir con la altura del header fijo */
-}
-
-/* Si no tienes <main>, puedes añadir este padding al body o a un contenedor principal */
-body {
-    padding-top: 90px; /* Si el header es fijo, el contenido necesita este padding */
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px; /* Ajustar padding para header móvil */
+    /* Columnas principales en móvil */
+    .principal {
+        flex-direction: column;
+        padding: 15px 5%; /* Ajustar padding para móviles */
     }
-}
 
+    .izquierda, .derecha {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
 
-/* --- Estilos del Formulario y Pie de Página (Mejoras Visuales) --- */
-.formulario {
-    max-width: 650px; /* Un poco más ancho */
-    margin: 60px auto; /* Más margen para separar de otros elementos */
-    padding: 35px; /* Más padding interno */
-    border: none; /* Eliminar borde para un look más suave */
-    border-radius: 12px; /* Bordes más redondeados */
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra más suave y moderna */
-}
+    .navegador-pie {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.formulario label {
-    display: block;
-    margin-bottom: 12px;
-    font-weight: 600; /* Negrita para las etiquetas */
-    color: #444;
-}
+    .navegador-pie a {
+        padding: 8px 0;
+    }
 
-.formulario input[type="text"],
-.formulario input[type="email"] {
-    width: calc(100% - 24px); /* Ajusta el ancho para el padding */
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #e0e0e0; /* Borde más sutil */
-    border-radius: 6px;
-    font-size: 1.05em; /* Ligeramente más grande */
-    color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.formulario input[type="text"]:focus,
-.formulario input[type="email"]:focus {
-    outline: none;
-    border-color: #007bff; /* Borde azul al enfocar */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Sombra de enfoque */
-}
-
-.error {
-    color: #e74c3c; /* Rojo de error más estándar */
-    font-size: 0.85em;
-    display: block;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-#enviar {
-    background-color: #28a745; /* Un verde más profesional */
-    color: white;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.15em;
-    font-weight: 700; /* Más negrita */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    letter-spacing: 0.5px; /* Espaciado entre letras */
-}
-
-#enviar:hover {
-    background-color: #218838; /* Verde más oscuro al pasar el ratón */
-    transform: translateY(-2px); /* Pequeño efecto de elevación */
-}
-
-#enviar:active {
-    transform: translateY(0); /* Vuelve a la posición al hacer clic */
-}
-
-/* --- Estilos del Pie de Página --- */
-.pie-de-pagina {
-    width: 100%;
-    background-color: #333333; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    padding: 25px 0; /* Más padding */
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 80px; /* Margen superior para separarlo del contenido */
-}
-
-.navegador-pie {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.navegador-pie a {
-    padding: 10px 18px; /* Más padding para los enlaces del footer */
-    color: #ffffff; /* Blanco para los enlaces */
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: color 0.3s ease, transform 0.2s ease;
-    position: relative; /* Para el efecto de underline */
-    overflow: hidden; /* Para ocultar el overflow del underline */
-}
-
-/* Underline animado para los enlaces del footer */
-.navegador-pie a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #007bff;
-    bottom: 5px; /* Posición del underline */
-    left: -100%; /* Empieza fuera de la vista */
-    transition: left 0.3s ease-out;
-}
-
-.navegador-pie a:hover::after {
-    left: 0; /* Se desliza a la vista */
-}
-
-
-.navegador-pie a:hover {
-    color: #007bff;
-    transform: translateY(-2px); /* Pequeña elevación al pasar el ratón */
-}
-
-a:-webkit-any-link {
-    /* Esta regla puede causar conflictos. Es mejor ser específico con los enlaces */
-    /* por ejemplo: a { text-decoration: none; } o a:not([class]) { color: blue; } */
-    text-decoration: none;
+    .imagen-codigosqr {
+        width: 100%; /* La imagen QR ocupa todo el ancho disponible */
+        max-width: 400px; /* Establece un máximo para que no se vea gigante */
+        height: auto;
+    }
 }

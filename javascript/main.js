@@ -6,4 +6,4 @@ function mostrarSiguienteSlide() {
   index = (index + 1) % slides.length;
   slides[index].classList.add("activa");
 }
-setInterval(mostrarSiguienteSlide, 3000);
+setInterval(mostrarSiguienteSlide, 4000);

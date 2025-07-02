@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Alimentaria</title>
+    <title>CSAlimentaria</title>
     <link rel="stylesheet" href="/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -42,66 +42,35 @@
                         <a href="codigos-qr.html">Códigos QR</a>
                     </li>
                     <li class="menu-link"><a href="legislacion.html">Legislación</a></li>
-                    <li class="menu-link"><a href="#contacto">Contacto</a></li>
+                    <li class="menu-link"><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="carrusel">
-        <div class="slide" style="background-image: url('/imagenes/chef.jpg');">
-            <div style="padding-right: 5%; text-align: right;">
-                <p class="chef">¿Quieres saber<br>cómo mejorar<br>tu negocio?</p>
-                <button class="boton-carrusel"><a href="index.html#contacto">MÁS INFORMACIÓN</a></button>
-            </div>
+    <div class="principal-qr">
+        <div class="izquierda">
+            <h2>Validación de etiquetados</h2>
+            <p>En <strong>CSA</strong> nos adaptamos a los requerimientos de cada empresa cumpliendo siempre la normativa vigente.</p>
+            <p>El etiquetado de productos es parte imprescindible y fundamental de su Sistema de Autocontrol que se rige por unas normativas concreta donde se especifican las normas generales de etiquetado, presentación y publicidad de los productos alimenticios así como la información alimentaria que hay que facilitar al consumidor en ese etiquetado.</p>
+            <p>Es por ello por lo que en <strong>CSA</strong> realizamos validaciones de etiquetados de productos alimentarios.</p>
+            <h6>A quién va dirigido</h6>
+            <p>Está dirigido a establecimientos que se dediquen a la producción, transformación, elaboración de alimentos envasados.</p>
+            <p>También asesoramos a los establecimientos de venta directa al consumidor sobre la información que deben ofrecer y cómo debe ser presentada.</p>
+            <h6>¿Cómo se realiza?</h6>
+            <ol>
+                <li>Revisión del etiquetado actual.</li>
+                <li>Entrega de un informe con los errores o modificaciones oportunas.</li>
+                <li>Revisión periódica por cambio de normativa o petición por parte de la autoridad competente.</li>
+            </ol>
         </div>
-        <div class="slide" style="background-image: url('/imagenes/formacion-scaled.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="formacion">La formación,<br>un pilar para asegurar<br>tu crecimiento</p>
-                <button class="boton-carrusel"><a href="formacion.html">MÁS INFORMACIÓN</a></button>
-            </div>
-        </div>
-        <div class="slide activa" style="background-image: url('/imagenes/codigo-qr.jpg');">
-            <div style="padding-left: 5%;">
-                <p class="codigo-qr">Tu carta o menú<br>a través de<br><span style="color:#204984;">CÓDIGO QR</span></p>
-                <button class="boton-carrusel"><a href="codigos-qr.html">MÁS INFORMACIÓN</a></button>
-            </div>
+        <div class="derecha">
+            <img src="/imagenes/validación-de-etiquetados.png" class="imagen-codigosqr">
+            <h6>Productos nuevos</h6>
+            <p>Si es un producto nuevo, en <strong>CSA</strong> diseñamos la etiqueta para que contemple toda la información que exige la normativa así como el modo de presentación de esa información según el tipo de actividad que cada empresa o establecimiento realice.</p>
+            <p>Disponemos de las herramientas necesarias para el cálculo del valor nutricional de su producto, información que también debe aparecer en el etiquetado de una forma concreta e información concreta según el Reglamento 1169/2011.</p>
+            <button class="boton-formulario"><a href="index.html#contacto">FORMULARIO DE CONTACTO</a></button>
         </div>
     </div>
-    <br id="contacto"><br>
-    <div>
-        <form class="formulario" id="miFormulario">
-            <div>
-                <label>
-                    Nombre:
-                    <br>
-                    <input type="text" id="nombre">
-                    <span class="error" id="errorNombre"></span>
-                </label>
-                <label>
-                    Apellidos:
-                    <br>
-                    <input type="text" id="apellidos">
-                    <span class="error" id="errorApellidos"></span>
-                </label>
-                <label>
-                    Email:
-                    <br>
-                    <input type="email" id="email">
-                    <span class="error" id="errorEmail"></span>
-                </label>
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los términos
-                    <span class="error" id="errorTerminos"></span>
-                </label>
-                <button type="submit" id="enviar">Enviar</button>
-                <p id="resultado"></p>
-            </div>
-        </form>
-    </div>
-    <br><br>
-    <script src="/javascript/main.js"></script>
-    <script src="/javascript/formulario.js" defer></script>
-    <script src="/javascript/menu.js"></script>
     <footer class="pie-de-pagina">
         <nav class="navegador-pie" role="navigation" aria-label="Menú principal">
             <div class="logo">
@@ -117,6 +86,6 @@
                 <span style="font-size: 0.9em; padding: 10px 0px;">Diseñada por </span><a class="kerde" style="padding: 10px 18px 10px 0px; text-align: right;" href="https://kerde.es" target="_blank" ><strong>KERDÊ Soluciones</strong></a> 
             </div>
         </nav>
-    </footer>
+    </footer>  
 </body>
 </html>
